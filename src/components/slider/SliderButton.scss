@@ -1,0 +1,59 @@
+@import '../../App.scss';
+@import '../Theme/ThemeToggle.scss';
+
+.slider-button {
+    display: inline-block;
+    position: relative;
+    width: 3rem;
+    height: calc(($height) * 0.03);
+  
+    input {
+      display: none;
+    }
+  
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $hue-five;
+      transition: 0.4s;
+      border-radius: $border-radius;
+  
+      &:before {
+        position: absolute;
+        content: "";
+        height: calc(($height) * 0.02);
+        width: calc(($width) * 0.27);
+        left: 4px;
+        bottom: 4px;
+        background-color: $secondary-color;
+        transition: 0.4s;
+        border-radius: $radius;
+      }
+    }
+  
+    input:checked + .slider {
+      background-color: $accent-color;
+    }
+  
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  }
+
+  .slider-button {
+    // ...
+  
+    input:checked + .slider {
+      background-color: $hue-one; // green background color
+    }
+  
+    input:checked + .slider:before {
+      background-color: $hue-four; // dark green slider handle color
+      transform: translateX(26px);
+    }
+  }
+  

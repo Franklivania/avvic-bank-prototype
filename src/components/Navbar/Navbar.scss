@@ -1,0 +1,46 @@
+@import '../../App.scss';
+@import '../Theme/ThemeToggle.scss';
+
+header{
+    width: $width;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $font;
+
+
+    img{
+        width: calc(($width) * 0.1);
+    }
+
+    aside{
+        width: calc(($width) * 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &.dark{
+
+    }
+
+}
+
+nav{
+    width: calc(($width) * 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: $font;
+
+    .link{
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover{
+            color: $accent-color;
+        }
+    }
+}
