@@ -17,7 +17,7 @@ const Navbar = () => {
           <NavItems />
           <ToggleButton />
         </aside>
-        
+
       </header>
     );
   };
@@ -28,6 +28,8 @@ function NavItems() {
             <Link to='/' className='link'>Features</Link>
             <Link to='/' className='link'>Business</Link>
             <Link to='/' className='link'>Help</Link>
+
+            <button type='submit'>Get started</button>
         </nav>
     )
 }

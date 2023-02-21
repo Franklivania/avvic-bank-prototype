@@ -1,0 +1,33 @@
+@import '../../App.scss';
+@import '../Theme/ThemeToggle.scss';
+
+main{
+    width: $width;
+    font-family: $font;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+
+    .right{
+        h1{
+            font-size: 5rem;
+            background: linear-gradient(
+                45deg,
+                rgba(($hue-two), 1),
+                rgba(($hue-four), 1)
+            );
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        h3{
+            font-size: 2rem;
+            color: $primary-color;
+
+            &.dark{
+                color: $dark-primary-color;
+            }
+        }
+    }
+}
