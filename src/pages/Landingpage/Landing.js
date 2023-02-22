@@ -5,6 +5,7 @@ import './Landing.scss';
 import Hero from '../../components/Hero/Hero';
 import Services from '../../components/Services/Services';
 import Start from '../../components/Start/Start';
+import Connect from '../../components/Connect/Connect';
 
 const Landing = () => {
   const { theme } = useContext(ThemeToggleContext);
@@ -15,6 +16,7 @@ const Landing = () => {
       <Hero />
       <Services />
       <Start /> 
+      <Connect />
     </div>
   );
 };

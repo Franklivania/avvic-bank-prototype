@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "icon": "fa-brands fa-linkedin fa-2x",
+        "link": "https://www.linkedin.com/in/avvic-group-1b2b81231/"
+    },
+    {
+        "id": 1,
+        "icon": "fa-brands fa-twitter fa-2x",
+        "link": "https://twitter.com/AvvicGroup"
+    },
+    {
+        "id": 1,
+        "icon": "fa-brands fa-facebook fa-2x",
+        "link": "https://www.facebook.com/avvicconsults"
+    },
+    {
+        "id": 1,
+        "icon": "fa-brands fa-instagram fa-2x",
+        "link": "https://www.instagram.com/avvicconsults/"
+    }
+]
