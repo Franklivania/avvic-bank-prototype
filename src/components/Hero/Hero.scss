@@ -36,3 +36,25 @@ main{
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    main{
+
+        .left{
+            padding: 0 1rem;
+            h1{
+                font-size: 2rem;
+            }
+
+            h3{
+                font-size: 1.3rem;
+            }
+        }
+        
+        .right{
+            img{
+                display: none;
+            }
+        }
+    }
+}

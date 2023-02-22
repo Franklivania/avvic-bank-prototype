@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './Navbar.scss'
 import { Link } from 'react-router-dom'
 import ToggleButton from '../ToggleSwitch/ToggleButton'
@@ -8,14 +8,19 @@ import logo from '../../assets/avvic_logo.png'
 
 const Navbar = () => {
     const { theme } = useContext(ThemeToggleContext);
+
+    const handleToggle = {
+        
+    }
+
     return (
       <header className={`navbar ${theme}`}>
 
-        <img src={logo} alt="" />
+        <a href="https://avvicgroup.com/" target='_blank'><img src={logo} alt="" /></a>
 
         <aside>
           <NavItems />
-          <ToggleButton />
+          {/* <ToggleButton /> */}
         </aside>
 
       </header>
@@ -23,15 +28,35 @@ const Navbar = () => {
   };
 
 function NavItems() {
-    return(
-        <nav>
-            <Link to='/' className='link'>Features</Link>
-            <Link to='/' className='link'>Business</Link>
-            <Link to='/' className='link'>Help</Link>
-            <Link to='/' className='link'>Company</Link>
+  const [open, setOpen] = useState(false);
 
-            <button type='submit'>Get started</button>
-        </nav>
+    return(
+        <>
+            <nav className='main'>
+                <Link to='/' className='link'>Features</Link>
+                <Link to='/' className='link'>Business</Link>
+                <Link to='/' className='link'>Help</Link>
+                <Link to='/' className='link'>Company</Link>
+
+                <button type='submit'>Get started</button>
+            </nav>
+
+            <button className="mobile" onClick={() => setOpen(!open)}>
+              <i className={`fa-solid fa-${open ? 'times' : 'ellipsis-vertical'} fa-2x`}></i>
+            </button>
+            {
+              open && (
+                <nav className={open ? 'mobilenav show' : 'mobilenav'}>
+                  <Link to='/' className='link'>Features</Link>
+                  <Link to='/' className='link'>Business</Link>
+                  <Link to='/' className='link'>Help</Link>
+                  <Link to='/' className='link'>Company</Link>
+
+                  <button type='submit'>Get started</button>
+                </nav>
+              )
+            }
+        </>
     )
 }
 

@@ -6,6 +6,7 @@ import Hero from '../../components/Hero/Hero';
 import Services from '../../components/Services/Services';
 import Start from '../../components/Start/Start';
 import Connect from '../../components/Connect/Connect';
+import Footer from '../../components/Footer/Footer';
 
 const Landing = () => {
   const { theme } = useContext(ThemeToggleContext);
@@ -17,6 +18,7 @@ const Landing = () => {
       <Services />
       <Start /> 
       <Connect />
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,70 @@
+@import '../../App.scss';
+@import '../Theme/ThemeToggle.scss';
+
+.footer{
+    width: $width;
+    clip-path: polygon(0 28%, 100% 0, 100% 100%, 0% 100%);
+    background: $hue-five;
+    font-family: $font;
+    padding: 15rem 1rem 2rem 1rem;
+
+    section{
+        padding: 1rem;
+        border-bottom: 0.02rem solid $main-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        aside{
+            display: flex;
+            flex-direction: column;
+            
+            a{
+                text-decoration: none;
+                color: $main-color;
+            }
+
+            address{
+                font-family: $font;
+            }
+        }
+    }
+
+    .below{
+        width: $width;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        font-family: $font;
+
+        img{
+            width: calc(($width) * 0.3);
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    footer{
+        width: $width;
+        section{
+            width: $width;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            aside{
+                width: $width;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin: 1rem 0;
+            }
+        }
+    }
+}

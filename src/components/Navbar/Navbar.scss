@@ -1,23 +1,24 @@
 @import '../../App.scss';
 @import '../Theme/ThemeToggle.scss';
 
-.light{
-    header{
-        width: $width;
-        padding: 0.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-family: $font;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
+
+header{
+    width: $width;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $font;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 
 
     img{
-        width: calc(($width) * 0.1);
+        width: calc(($width) * 0.2);
     }
-    
+
     aside{
         width: calc(($width) * 0.5);
         display: flex;
@@ -25,14 +26,9 @@
         justify-content: space-between;
         
     }
-    
-    }
 
     nav{
         width: calc(($width) * 1);
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
         font-family: $font;
         
         .link{
@@ -58,13 +54,86 @@
             }
         }
     }
+
+    .main{        
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
-.dark{
-    nav{
 
-        .link{
-            color: $dark-primary-color;
+.mobile{
+    // display: none;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    background: none;
+    z-index: 11;
+
+    i{
+        color: $main-color;
+    }
+}
+
+.mobilenav{
+    background-color: $secondary-color;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: calc(($width) * 1);
+    max-width: calc((($width) * 0.8));
+    transition: transform 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    justify-content: none;
+    padding: 2rem;
+
+    .link{
+        padding: 0.5rem;
+        width: $width;
+        margin: 2rem 0;
+        border-bottom: 0.03rem solid $hue-five;
+    }
+}
+
+.mobilenav{
+    transition: transform 0.5s ease-out;
+    transform: translateX(100%);
+}
+
+.mobilenav.show {
+    transform: translateX(0);
+}
+
+@media screen and (min-width: 1024px) {
+    header{
+
+        .mobile{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header{
+
+        img{
+            width: calc(($width) * 0.4);
+        }
+
+        nav{
+            display: none;
+        }
+        .main{
+            display: none;
+        }
+
+        .mobile{
+            display: block;
         }
     }
 }
