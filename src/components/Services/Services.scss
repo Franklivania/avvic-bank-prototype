@@ -54,14 +54,14 @@
         flex-direction: column;
         width: $width;
 
+        img{
+            width: calc(($width) * 1);
+        }
+
         aside{
             width: $width;
             grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
             // gap: 2rem;
-
-            .box{
-                // width: calc(($width) * 3);
-            }
         }
     }
 }
