@@ -1,63 +1,70 @@
 @import '../../App.scss';
 @import '../Theme/ThemeToggle.scss';
 
-header{
-    width: $width;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: $font;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+.light{
+    header{
+        width: $width;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: $font;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
 
 
     img{
         width: calc(($width) * 0.1);
     }
-
+    
     aside{
-        width: calc(($width) * 0.3);
+        width: calc(($width) * 0.5);
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        
+    }
+    
     }
 
-    &.dark{
-
-    }
-
-}
-
-nav{
-    width: calc(($width) * 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-family: $font;
-
-    .link{
-        color: $primary-color;
-        text-decoration: none;
-
-        &:hover{
-            color: $accent-color;
+    nav{
+        width: calc(($width) * 1);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: $font;
+        
+        .link{
+            color: $primary-color;
+            text-decoration: none;
+            
+            &:hover{
+                color: $accent-color;
+            }
+        }
+        
+        button{
+            background: $button-color;
+            color: $secondary-color;
+            border-radius: $button-radius;
+            outline: none;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            cursor: pointer;
+            
+            &:hover{
+                background: $accent-color;
+            }
         }
     }
+}
 
-    button{
-        background: $button-color;
-        color: $secondary-color;
-        border-radius: $button-radius;
-        outline: none;
-        border: none;
-        padding: 0.5rem 1.2rem;
-        cursor: pointer;
+.dark{
+    nav{
 
-        &:hover{
-            background: $accent-color;
+        .link{
+            color: $dark-primary-color;
         }
     }
 }

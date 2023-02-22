@@ -28,6 +28,7 @@ function NavItems() {
             <Link to='/' className='link'>Features</Link>
             <Link to='/' className='link'>Business</Link>
             <Link to='/' className='link'>Help</Link>
+            <Link to='/' className='link'>Company</Link>
 
             <button type='submit'>Get started</button>
         </nav>

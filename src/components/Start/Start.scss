@@ -1,0 +1,57 @@
+@import '../../App.scss';
+@import '../Theme/ThemeToggle.scss';
+
+.start{
+    width: $width;
+    display: flex;
+    flex-direction: column;
+    // background: $hue-one;
+    padding: 4rem 0;
+
+    .top{
+        width: $width;
+        text-align: center;
+
+        h1{
+            font-size: 3rem;
+        }
+
+        p{
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+    }
+
+    .bottom{
+        width: $width;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        place-items: center;
+
+        .card{
+            height: calc(($height) * 0.5);
+            width: calc(($width) * 0.8);
+            display: flex;
+            margin: 1rem;
+            padding: 1rem;
+            flex-direction: column;
+            justify-content: space-around;
+            background: $hue-five;
+            border-radius: $button-radius;
+
+            h2{
+                font-weight: 500;
+                font-size: 2rem;
+                color: $hue-four;
+                width: $width;
+            }
+
+            small{
+                width: $width;
+                padding: 0.3rem;
+                background: $hue-four;
+                color: $secondary-color;
+            }
+        }
+    }
+}

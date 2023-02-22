@@ -1,0 +1,37 @@
+[    
+    {
+        "id": 1,   
+        "title": "CROSS BANK TRANSACTIONS",        
+        "icon": "fa-solid fa-building-columns fa-2x"   
+    },    
+    {
+        "id": 2,        
+        "title": "FASTER CURRENCY EXCHANGE",        
+        "icon": "fa-solid fa-money-bill-transfer fa-2x"    
+    },    
+    {
+        "id": 3,        
+        "title": "UNIQUE CODE",        
+        "icon": "fa-solid fa-qrcode fa-2x"    
+    },    
+    {
+        "id": 4,        
+        "title": "GROUP MANAGEMENTS",        
+        "icon": "fa-solid fa-people-group fa-2x"    
+    },    
+    {
+        "id": 5,        
+        "title": "24/7 AVAILABILITY",        
+        "icon": "fa-solid fa-clock fa-2x"    
+    },    
+    {
+        "id": 6,        
+        "title": "FAST CUSTOMER CARE",        
+        "icon": "fa-solid fa-user fa-2x"    
+    },    
+    {
+        "id": 7,        
+        "title": "EASY BILL PAYMENTS",        
+        "icon": "fa-solid fa-credit-card fa-2x"    
+    }
+]

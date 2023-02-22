@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <main className={`hero ${theme}`}>
-        <div className='right'>
+        <div className='left'>
             <h1>Revolutionalise Banking for yourself</h1>
             
             <h3>Let us guide you to the future of digital banking</h3>
@@ -23,7 +23,7 @@ const Hero = () => {
             </p>
         </div>
 
-        <div className="left">
+        <div className="right">
             <img src={banking} alt="" title='Banking' />
         </div>
     </main>

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "heading": "Create an Account",
+        "image": "../../assets/create-account.png",
+        "body": "With the easy to set up process, it is easy to have your account with us by just clicking the start button at the top and following the prompts. We provide easy methods to get started with. You would need to register as a fresh user, with no existiing account, you would need to provide any form of qualifications that ensure you are within the age limt and area a citizen of the country. Then you are good for clearance",
+        "quote": "avvic banking"
+    },
+    {
+        "id": 2,
+        "heading": "Connect multiple accounts",
+        "image": "../../assets/connect.png",
+        "body": "Not only do we peform excluive services, but you can keep track of the various accounts you have with other banks with us, in our special storage for you.",
+        "quote": "avvic banking"
+    },
+    {
+        "id": 3,
+        "heading": "Family has never been tighter",
+        "image": "../../assets/family.png",
+        "body": "With this, sending money to you loved ones is made easier with the click of a button. You can even create close family groups and perform multiple simultaneous actions with a click",
+        "quote": "avvic banking"
+    },
+    {
+        "id": 4,
+        "heading": "Accessible user info",
+        "image": "../../assets/unlocked.png",
+        "body": "Have you ever lost important information, with us, you wouldnt because we have exclusive saving services for all our memebers that allow them to store their personal info for whenever they would need it. the information cannot be accessed by the organisation's personnel",
+        "quote": "avvic banking"
+    },
+    {
+        "id": 5,
+        "heading": "Easy Credit",
+        "image": "../../assets/credit.png",
+        "body": "Build easily your positive credit score with us, and become instantly credit worthy. This would improve your chances for long term loan bargains and the such. It's easy, just a click away",
+        "quote": "avvic banking"
+    },
+    {
+        "id": 6,
+        "heading": "Maximum Security",
+        "image": "../../assets/sheild.png",
+        "body": "All information are accessed and updated by the user. The organisation has no say whatsover with what you do with your information except you breach the terms of contract.",
+        "quote": "avvic banking"
+    }
+]

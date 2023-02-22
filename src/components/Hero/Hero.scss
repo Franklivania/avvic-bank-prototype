@@ -3,13 +3,18 @@
 
 main{
     width: $width;
+    height: $height;
     font-family: $font;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem 0;
 
-    .right{
+    .left{
+        height: calc(($height) * 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         h1{
             font-size: 5rem;
             background: linear-gradient(

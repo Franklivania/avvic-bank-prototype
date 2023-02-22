@@ -26,3 +26,19 @@ $font-light: 'Helvetica Light', sans-serif;
     background: $dark-secondary-color;
   }
 }
+
+.light {
+  background-color: $secondary-color;
+  color: $primary-color;
+  .dark-text {
+    color: $dark-primary-color;
+  }
+}
+
+.dark {
+  background-color: $dark-secondary-color;
+  color: $dark-primary-color;
+  .dark-text {
+    color: $primary-color;
+  }
+}
