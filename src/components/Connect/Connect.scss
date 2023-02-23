@@ -123,19 +123,22 @@
 
             .subscribe{
                 width: calc(($width) * 1);
+
                 h3{
                     align-self: center;
                 }
 
                 label{
                     display: flex;
-                    // flex-direction: column;
-
-                    #email{
-                        width: calc(($width) * 0.8);
+                    flex-direction: column;
+                    width: calc(($width) * 1);
+                    
+                    input{     
+                        margin: 0.2rem;
                     }
-                    #submit{
-                        padding: 0.6rem 1rem;
+
+                    #email, #submit{
+                        width: calc(($width) * 0.8);
                     }
                 }
             }

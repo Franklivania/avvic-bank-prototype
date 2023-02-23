@@ -1,0 +1,95 @@
+@import '../App.scss';
+@import '../components/Theme/ThemeToggle.scss';
+
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $width;
+    height: $height;
+    z-index: 9999;
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+  
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+  
+    &.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+    .upper-half,
+    .lower-half {
+      position: absolute;
+      width: $width;
+      height: calc(($height) * 0.5);
+      background-color: $primary-color;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .upper-half {
+        top: 0;
+        // transform: translateY(-100%);
+        .move-up{
+            transform: translateY(-100%);
+        }
+    }
+      
+      .lower-half {
+        bottom: 0;
+        // transform: translateY(100%);
+        .move-down{
+            transform: translateY(100%);
+        }
+    }
+      
+  
+    .logo {
+        width: calc(($width) * 0.5);
+        height: calc(($height) * 0.5);
+        background-image: url(../assets/avvic_logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: all 0.5s ease-in-out;
+      
+        &.grow {
+          width: 15rem;
+          height: 15rem;
+        }
+      
+        &.hide {
+          opacity: 0;
+        }
+      
+        &.dim {
+          opacity: 0.5;
+        }
+      
+        &.brighten {
+          opacity: 1;
+        }
+      
+        animation: dim-brighten 1s ease-in-out infinite;
+      
+        @keyframes dim-brighten {
+          0% {
+            opacity: 0.5;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0.5;
+          }
+        }
+    }
+     
+}
+  

@@ -50,6 +50,7 @@
 @media screen and (max-width: 767px) {
     footer{
         width: $width;
+
         section{
             width: $width;
             display: flex;
@@ -64,6 +65,13 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 margin: 1rem 0;
+            }
+        }
+
+        .below{
+            width: $width;
+            img{
+                width: calc(($width) * 2);
             }
         }
     }

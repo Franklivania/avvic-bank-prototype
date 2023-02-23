@@ -12,6 +12,7 @@ main{
 
     .left{
         height: calc(($height) * 0.7);
+        padding: 0 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -33,6 +34,13 @@ main{
             &.dark{
                 color: $dark-primary-color;
             }
+        }
+    }
+
+    .right{
+        width: calc(($width) * 0.5);
+        img{
+            width: calc(($width) * 1);
         }
     }
 }
