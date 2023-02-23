@@ -20,7 +20,7 @@ $font: 'Helvetica', sans-serif;
 $font-light: 'Helvetica Light', sans-serif;
 
 .App{
-  background: rgba(($secondary-color), 0.5);
+  background: rgba(($secondary-color), 1);
 
   &.dark{
     background: $dark-secondary-color;
