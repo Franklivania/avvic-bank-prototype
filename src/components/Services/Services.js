@@ -9,7 +9,7 @@ const Services = () => {
 
   return (
     <section className={`services ${theme}`}>
-        <img src={mobile} alt="" title='Mobile phone' />
+        <img src={mobile} alt="" title='Mo  bile phone' />
 
         <aside>
             {

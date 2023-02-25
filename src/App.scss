@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/helvetica-255');
+@import url('https://fonts.cdnfonts.com/css/dosis');
 @import './components/Theme/ThemeToggle.scss';
 
 *,
@@ -16,8 +16,11 @@ $border-radius: 1rem;
 $radius: 50%;
 $height: 100vh;
 $width: 100%;
-$font: 'Helvetica', sans-serif;
-$font-light: 'Helvetica Light', sans-serif;
+$large-font: 3.345rem;
+$semi-large-font: 1.5rem;
+$normal-font: 1rem;
+$small-font: 0.5rem;
+$font: 'Dosis', sans-serif;
 
 .App{
   background: rgba(($secondary-color), 1);

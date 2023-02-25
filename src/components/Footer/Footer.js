@@ -43,7 +43,7 @@ const Footer = () => {
         </section>
 
         <div className="below">
-            <Link to='/'><img src={logo} alt="" title='avvic logo' /></Link>
+            <Link to='/' className='image'><img src={logo} alt="" title='avvic logo' /></Link>
 
             <p>
                 Avvic Banking is a subsidiary of Avvic Groups, which is aimed towards providing services <br />
@@ -54,7 +54,7 @@ const Footer = () => {
             <br />
 
             <p>
-                2023, all rights are reserved by the Avvic group, and shall not be used without express permision
+                2023. All rights are reserved by the Avvic group, and shall not be used without express permision
             </p>
         </div>
     </footer>   

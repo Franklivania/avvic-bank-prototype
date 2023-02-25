@@ -15,12 +15,16 @@ main{
         padding: 0 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+
+        h1, h3, button{
+            margin: 2rem 0;
+        }
+
         h1{
-            font-size: 5rem;
+            font-size: $large-font;
             background: linear-gradient(
                 45deg,
-                rgba(($hue-two), 1),
+                rgba(($button-color), 1),
                 rgba(($hue-four), 1)
             );
             -webkit-text-fill-color: transparent;
@@ -28,11 +32,26 @@ main{
         }
 
         h3{
-            font-size: 2rem;
-            color: $primary-color;
+            font-size: $semi-large-font;
+            color: $hue-four;
+        }
 
-            &.dark{
-                color: $dark-primary-color;
+        p{
+            color: $hue-four;
+        }
+
+        button{
+            width: calc(($width) * 0.2);
+            background: $button-color;
+            color: $secondary-color;
+            border-radius: $button-radius;
+            outline: none;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            cursor: pointer;
+            
+            &:hover{
+                background: $accent-color;
             }
         }
     }
@@ -40,16 +59,24 @@ main{
     .right{
         width: calc(($width) * 0.5);
         img{
-            width: calc(($width) * 1);
+            width: calc(($width) * 0.5);
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            top: calc(($height) * 0.1);
+            left: calc(($width) * 0.5);
+            object-fit: cover;
         }
     }
 }
 
 @media screen and (max-width: 767px) {
     main{
+        width: $width;
 
         .left{
             padding: 0 1rem;
+            width: calc(($width) * 1);
+
             h1{
                 font-size: 2rem;
             }
@@ -57,9 +84,14 @@ main{
             h3{
                 font-size: 1.3rem;
             }
+
+            button{
+                width: calc(($width) * 0.5);
+            }
         }
         
         .right{
+            width: 0;
             img{
                 display: none;
             }

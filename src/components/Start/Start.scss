@@ -1,66 +1,91 @@
 @import '../../App.scss';
 @import '../Theme/ThemeToggle.scss';
 
-.start{
+.start {
+  width: $width;
+  display: flex;
+  flex-direction: column;
+  // background: $hue-one;
+  padding: 4rem 0;
+
+  .top {
     width: $width;
-    display: flex;
-    flex-direction: column;
-    // background: $hue-one;
-    padding: 4rem 0;
+    text-align: center;
 
-    .top{
-        width: $width;
-        text-align: center;
-
-        h1{
-            font-size: 3rem;
-        }
-
-        p{
-            font-size: 1.3rem;
-            font-style: italic;
-        }
+    h1 {
+      font-size: $large-font;
+      color: $hue-two;
     }
 
-    .bottom{
-        width: $width;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-        place-items: center;
-
-        .card{
-            height: calc(($height) * 0.5);
-            width: calc(($width) * 0.8);
-            display: flex;
-            margin: 1rem;
-            padding: 1rem;
-            flex-direction: column;
-            justify-content: space-around;
-            background: $hue-five;
-            border-radius: $button-radius;
-
-            h2{
-                font-weight: 500;
-                font-size: 2rem;
-                color: $hue-four;
-                width: $width;
-            }
-
-            small{
-                width: $width;
-                padding: 0.3rem;
-                background: $hue-four;
-                color: $secondary-color;
-            }
-        }
+    p {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: $hue-one;
     }
+  }
+
+  .bottom {
+    width: $width;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    place-items: center;
+
+    .card {
+      height: calc(($height) * 0.4);
+      width: calc(($width) * 0.7);
+      display: flex;
+      margin: 1rem;
+      padding: 2rem 0;
+      flex-direction: column;
+      justify-content: space-around;
+      background: $hue-four;
+      border-radius: $button-radius;
+
+      h2 {
+        font-weight: 500;
+        font-size: 2rem;
+        color: $hue-three;
+        width: $width;
+      }
+
+      p {
+        color: $secondary-color;
+      }
+
+      small {
+        width: $width;
+        padding: 0.3rem;
+        background: $secondary-color;
+        color: $hue-three;
+      }
+
+      h2, p{
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  .slide-in {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all 1s ease-in-out;
+
+    &.slide-in-active {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .start{
-        
-        .bottom{
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        }
+  .start {
+    .bottom {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+      .card{
+        height: calc(($height) * 0.5);
+        width: calc(($width) * 0.8);
+      }
     }
+  }
 }

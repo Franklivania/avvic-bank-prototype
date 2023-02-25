@@ -4,7 +4,7 @@
 .footer{
     width: $width;
     clip-path: polygon(0 28%, 100% 0, 100% 100%, 0% 100%);
-    background: $hue-five;
+    background: $footer-color;
     font-family: $font;
     padding: 15rem 1rem 2rem 1rem;
 
@@ -18,10 +18,11 @@
         aside{
             display: flex;
             flex-direction: column;
+            color: $hue-five;
             
             a{
                 text-decoration: none;
-                color: $main-color;
+                color: $hue-four;
             }
 
             address{
@@ -39,6 +40,7 @@
         text-align: center;
         padding: 2rem;
         font-family: $font;
+        color: $hue-five;
 
         img{
             width: calc(($width) * 0.3);
@@ -70,8 +72,12 @@
 
         .below{
             width: $width;
-            img{
-                width: calc(($width) * 2);
+
+            .image{
+
+                img{
+                    width: calc(($width) * 0.7);
+                }
             }
         }
     }

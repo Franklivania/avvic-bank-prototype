@@ -11,7 +11,7 @@ function App() {
       <PageLoader />
         <Router>
           <Routes>
-            <Route path='/' element={<Landing/>} />
+            <Route path='/' element={<Landing/>} /> 
           </Routes>
         </Router>
       </div>
