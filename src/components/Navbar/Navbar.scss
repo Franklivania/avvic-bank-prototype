@@ -95,6 +95,19 @@ header{
     display: flex;
     justify-content: none;
     padding: 2rem;
+    transition: all 0.5s ease-in-out;
+    animation: slide 0.5s linear;
+
+    @keyframes slide {
+        from{
+            transform: translateX(100%);
+            transition: all 0.5s ease-in-out;
+        }
+        to{
+            transform: translateX(0);
+            transition: all 0.5s ease-in-out;
+        }
+    }
 
     .link{
         padding: 0.5rem;
@@ -102,15 +115,21 @@ header{
         margin: 2rem 0;
         border-bottom: 0.03rem solid $hue-five;
     }
-}
 
-.mobilenav{
-    transition: transform 0.5s ease-out;
-    transform: translateX(100%);
-}
+    .show{
+        transition: all 0.5 ease-in-out;
+        animation: slideOut 0.5s linear;
 
-.mobilenav.show {
-    transform: translateX(0);
+        @keyframes slideOut {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(100%);
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {

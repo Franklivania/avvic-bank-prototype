@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import './Navbar.scss'
 import { Link } from 'react-router-dom'
 import ToggleButton from '../ToggleSwitch/ToggleButton'
@@ -29,6 +29,22 @@ const Navbar = () => {
 
 function NavItems() {
   const [open, setOpen] = useState(false);
+
+  const handleOutsideClick = (event) => {
+    if (event.target.closest('.mobile') || event.target.closest('.mobilenav')) {
+      return;
+    }
+
+    setOpen(false);
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleOutsideClick);
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    }
+  }, []);
+
 
     return(
         <>

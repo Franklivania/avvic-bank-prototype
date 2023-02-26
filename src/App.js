@@ -8,7 +8,7 @@ function App() {
   return (
     <ThemeToggleProvider>
       <div className="App">
-      <PageLoader />
+      {/* <PageLoader /> */}
         <Router>
           <Routes>
             <Route path='/' element={<Landing/>} /> 
