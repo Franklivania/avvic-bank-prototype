@@ -19,11 +19,11 @@ $width: 100%;
 $large-font: 3.345rem;
 $semi-large-font: 1.5rem;
 $normal-font: 1rem;
-$small-font: 0.5rem;
+$small-font: 0.7rem;
 $font: 'Dosis', sans-serif;
 
 .App{
-  background: rgba(($secondary-color), 1);
+  // background: rgba(($secondary-color), 1);
 
   &.dark{
     background: $dark-secondary-color;

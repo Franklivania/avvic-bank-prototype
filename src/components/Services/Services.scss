@@ -1,67 +1,132 @@
 @import '../../App.scss';
 @import '../Theme/ThemeToggle.scss';
 
-.services{
+.service{
     width: $width;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-items: center;
+    font-family: $font;
 
-    aside{
-        width: calc(($width) * 0.6);
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-        gap: 4rem;
-        font-family: $font;
-        padding: 0 3rem;
+    h1{
+        font-size: $large-font;
+        text-align: center;
+        color: $hue-three;
+        letter-spacing: 0.1rem;
+    }
 
-        .box{
-            height: calc(($height) * 0.15);
-            width: calc(($width) * 1.2);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: $border-radius;
-            text-align: center;
-            padding: 0.5rem;
-            background: $secondary-color;
-            box-shadow:  0.06rem 0.06rem 0.25rem #cdd6d7,
-                        -0.06rem -0.06rem 0.25rem #ffffff;
-            transition: all 0.3s ease-in-out;
+    .services{
+        width: $width;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        align-items: center;
+        
+        aside{
+            width: calc(($width) * 0.6);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+            gap: 4rem;
+            font-family: $font;
+            padding: 0 3rem;
+            
+            .box{
+                height: calc(($height) * 0.15);
+                width: calc(($width) * 1.2);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: $border-radius;
+                text-align: center;
+                padding: 0.5rem;
+                background: $button-color;
+                box-shadow:  0.06rem 0.06rem 0.25rem #cdd6d7,
+                -0.06rem -0.06rem 0.25rem #ffffff;
+                transition: all 0.3s ease-in-out;
+                
+                &:hover{
+                    box-shadow: 0.1rem 0.3rem $hue-five;
+                }
+
+                i{
+                    color: $hue-five;
+                }
+
+                p{
+                    font-size: $small-font;
+                    color: $hue-five;
+                    margin: 0.6rem 0;
+                    font-family: $font;
+                }
+            }
+        }
+
+    }
+    .buttons{
+        width: $width;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            padding: 0 1rem;
+            transition: all 0.2s ease-in-out;
 
             &:hover{
-                box-shadow: 0.1rem 0.3rem $hue-five;
+                transform: scale(1.2);
             }
+        }
 
-            i{
-                color: $hue-five;
-            }
-
-            p{
-                font-size: 0.7rem;
-                color: $primary-color;
-                margin: 0.6rem 0;
+        button{
+            background: $button-color;
+            color: $secondary-color;
+            border-radius: $button-radius;
+            outline: none;
+            border: none;
+            padding: 0.7rem 1.9rem;
+            cursor: pointer;
+            
+            &:hover{
+                background: $accent-color;
             }
         }
     }
 }
 
 @media screen and (max-width: 767px) {
-    .services{
-        display: flex;
-        flex-direction: column;
-        width: $width;
+    .service{
 
-        img{
-            width: calc(($width) * 1);
+        .services{
+            display: flex;
+            flex-direction: column;
+            width: $width;
+            
+            img{
+                width: calc(($width) * 1);
+            }
+            
+            aside{
+                width: $width;
+                grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+                // gap: 1rem;
+            }
         }
 
-        aside{
+        .buttons{
             width: $width;
-            grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-            // gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 1rem 0;
+
+            button, a{
+                margin: 0.5rem;
+                // padding: 0;
+            }
+
+            a{
+                padding: 0;
+            }
+
         }
     }
 }
